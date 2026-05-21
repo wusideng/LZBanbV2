@@ -51,12 +51,12 @@
 
         <div class="title-main-wrap">
           <span class="title-wing left"></span>
-          <h1 class="page-title">个人金融经营驾驶舱</h1>
+          <h1 class="page-title">{{ title }}</h1>
           <span class="title-wing right"></span>
         </div>
 
         <div class="title-bottom-deco">
-          <span class="deco-text">RETAIL FINANCIAL OPERATIONS COCKPIT</span>
+          <span class="deco-text">{{ subtitle }}</span>
           <span class="deco-bar"></span>
         </div>
       </div>
@@ -86,6 +86,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+
+const props = defineProps({
+  title: { type: String, default: '个人金融经营驾驶舱' },
+  subtitle: { type: String, default: 'RETAIL FINANCIAL OPERATIONS COCKPIT' }
+})
 
 const currentTime = ref('')
 const currentDate = ref('')

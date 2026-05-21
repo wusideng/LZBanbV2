@@ -1,21 +1,26 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: '/',
-    name: 'Index',
-    component: () => import('@/pages/IndexPage.vue')
+    path: "/",
+    name: "Index",
+    component: () => import("@/pages/IndexPage.vue"),
   },
   {
-    path: '/finance',
-    name: 'Finance',
-    component: () => import('@/container/FinanceContainer.vue')
-  }
-]
+    path: "/finance",
+    name: "Finance",
+    component: () => import("@/container/FinanceContainer.vue"),
+  },
+  {
+    path: "/channel",
+    name: "Channel",
+    component: () => import("@/container/ChannelContainer.vue"),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

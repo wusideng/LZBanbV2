@@ -11,6 +11,12 @@
           <div class="card-desc">零售经营总览 · 资产负债 · 客户分析</div>
           <div class="card-status"><span class="dot"></span> 点击进入</div>
         </div>
+        <div class="screen-card" @click="goTo('/channel')">
+          <div class="card-icon">📱</div>
+          <div class="card-title">客户经营与渠道运营驾驶舱</div>
+          <div class="card-desc">客户增长 · 渠道转化 · 运营监控</div>
+          <div class="card-status"><span class="dot"></span> 点击进入</div>
+        </div>
       </div>
     </div>
   </div>
