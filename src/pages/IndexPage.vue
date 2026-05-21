@@ -17,6 +17,12 @@
           <div class="card-desc">客户增长 · 渠道转化 · 运营监控</div>
           <div class="card-status"><span class="dot"></span> 点击进入</div>
         </div>
+        <div class="screen-card" @click="goTo('/wealth')">
+          <div class="card-icon">👑</div>
+          <div class="card-title">财富管理专题驾驶舱</div>
+          <div class="card-desc">AUM分析 · 财富客户 · 产品销售</div>
+          <div class="card-status"><span class="dot"></span> 点击进入</div>
+        </div>
       </div>
     </div>
   </div>

@@ -94,10 +94,10 @@ onUnmounted(() => {
 })
 
 const peakOption = computed(() => ({
-  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:9}},
+  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:11}},
   grid:{top:6,left:32,right:4,bottom:10},
-  xAxis:{type:'category',data:['0点','4点','8点','12点','16点','20点'],axisLabel:{color:'#4a5a6a',fontSize:8},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
-  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:8}},
+  xAxis:{type:'category',data:['0点','4点','8点','12点','16点','20点'],axisLabel:{color:'#4a5a6a',fontSize:10},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:10}},
   series:[{
     name:'并发峰值',type:'line',data:[12,8,85,72,68,88],smooth:true,symbol:'none',
     lineStyle:{color:'#00d4ff',width:2},

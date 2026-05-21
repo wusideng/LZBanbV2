@@ -47,20 +47,20 @@ const topFunctions = [
 ]
 
 const channelOption = computed(() => ({
-  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:10}},
+  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:12}},
   grid:{top:8,left:80,right:40,bottom:8},
-  xAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:8}},
-  yAxis:{type:'category',data:['支付宝','微信支付','特约商户','企业网银','手机银行'],axisLabel:{color:'#8899aa',fontSize:9},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
+  xAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:10}},
+  yAxis:{type:'category',data:['支付宝','微信支付','特约商户','企业网银','手机银行'],axisLabel:{color:'#8899aa',fontSize:11},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
   series:[
-    {name:'交易金额',type:'bar',barWidth:10,data:[286,320,185,420,528],itemStyle:{color:{type:'linear',x:0,y:0,x2:1,y2:0,colorStops:[{offset:0,color:'#00d4ff'},{offset:1,color:'#00ffcc'}]}},label:{show:true,position:'right',color:'#00ffcc',fontSize:9,formatter:'{c}亿'}}
+    {name:'交易金额',type:'bar',barWidth:10,data:[286,320,185,420,528],itemStyle:{color:{type:'linear',x:0,y:0,x2:1,y2:0,colorStops:[{offset:0,color:'#00d4ff'},{offset:1,color:'#00ffcc'}]}},label:{show:true,position:'right',color:'#00ffcc',fontSize:11,formatter:'{c}亿'}}
   ]
 }))
 
 const hourOption = computed(() => ({
-  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:10}},
+  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:12}},
   grid:{top:20,left:40,right:8,bottom:20},
-  xAxis:{type:'category',data:['0-2','2-4','4-6','6-8','8-10','10-12','12-14','14-16','16-18','18-20','20-22','22-24'],axisLabel:{color:'#4a5a6a',fontSize:7,rotate:30},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
-  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:8}},
+  xAxis:{type:'category',data:['0-2','2-4','4-6','6-8','8-10','10-12','12-14','14-16','16-18','18-20','20-22','22-24'],axisLabel:{color:'#4a5a6a',fontSize:9,rotate:30},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:10}},
   series:[{
     name:'活跃时段',type:'line',data:[12,8,5,18,65,85,78,72,68,88,52,25],smooth:true,
     symbol:'none',lineStyle:{color:'#00d4ff',width:2},
