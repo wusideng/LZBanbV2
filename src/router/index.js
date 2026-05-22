@@ -31,6 +31,11 @@ const routes = [
     name: "Digital",
     component: () => import("@/container/DigitalContainer.vue"),
   },
+  {
+    path: "/risk",
+    name: "Risk",
+    component: () => import("@/container/RiskContainer.vue"),
+  },
 ];
 
 const router = createRouter({

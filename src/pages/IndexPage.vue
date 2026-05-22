@@ -35,6 +35,12 @@
           <div class="card-desc">数字用户 · 渠道活跃 · 交易运营</div>
           <div class="card-status" style="color: #00E5FF;"><span class="dot" style="background: #00E5FF; box-shadow: 0 0 8px rgba(0,229,255,0.7);"></span> 点击进入</div>
         </div>
+        <div class="screen-card" @click="goTo('/risk')">
+          <div class="card-icon">🛡️</div>
+          <div class="card-title" style="color: #00FF99;">风险预警与经营监控驾驶舱</div>
+          <div class="card-desc">风险迁徙 · 区域风险 · 异常监控</div>
+          <div class="card-status" style="color: #00FF99;"><span class="dot" style="background: #00FF99; box-shadow: 0 0 8px rgba(0,255,153,0.7);"></span> 点击进入</div>
+        </div>
       </div>
     </div>
   </div>
