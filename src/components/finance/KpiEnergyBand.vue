@@ -89,7 +89,7 @@ function getSparkPath(data) {
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #33ddff;
   padding: 8px 0 6px;
@@ -145,7 +145,7 @@ function getSparkPath(data) {
   margin-bottom: 6px;
 }
 .kpi-label {
-  font-size: 11px;
+  font-size: 13px;
   color: #8899aa;
   white-space: nowrap;
 }
@@ -171,7 +171,7 @@ function getSparkPath(data) {
   text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
 }
 .kpi-unit {
-  font-size: 11px;
+  font-size: 13px;
   color: #4a5a6a;
 }
 
@@ -182,14 +182,14 @@ function getSparkPath(data) {
   margin-bottom: 4px;
 }
 .kpi-change {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   &.up { color: #00ff95; }
   &.down { color: #ff5b5b; }
-  .arrow { font-size: 10px; margin-right: 1px; }
+  .arrow { font-size: 12px; margin-right: 1px; }
 }
 .kpi-daily {
-  font-size: 10px;
+  font-size: 12px;
   color: #4a5a6a;
 }
 

@@ -50,17 +50,17 @@ function getSparkPath(data) {
 
 <style lang="scss" scoped>
 .wealth-kpi{padding:0 16px}
-.section-title{font-size:13px;font-weight:600;color:#D4AF37;padding:6px 0 4px;text-shadow:0 0 10px rgba(212,175,55,0.4);letter-spacing:2px;&::before{content:'◆ ';color:#00CFFF}}
+.section-title{font-size:15px;font-weight:600;color:#D4AF37;padding:6px 0 4px;text-shadow:0 0 10px rgba(212,175,55,0.4);letter-spacing:2px;&::before{content:'◆ ';color:#00CFFF}}
 .kpi-row{display:flex;gap:8px;flex:1;}
 .kpi-card{flex:1;padding:8px 10px;background:rgba(11,34,53,0.6);border:1px solid rgba(212,175,55,0.15);border-radius:8px;cursor:pointer;position:relative;overflow:hidden;transition:all .4s;min-width:0;&:hover{border-color:rgba(212,175,55,0.4);box-shadow:0 0 20px rgba(212,175,55,0.15);transform:translateY(-2px)}&::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#D4AF37,transparent);background-size:200% 100%;animation:flowBorder 3s linear infinite}}
 @keyframes flowBorder{0%{background-position:-200% 0}100%{background-position:200% 0}}
 .kpi-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
-.kpi-label{font-size:10px;color:#8899aa;white-space:nowrap}
+.kpi-label{font-size:12px;color:#8899aa;white-space:nowrap}
 .kpi-dot{width:5px;height:5px;border-radius:50%;&.up{background:#00ff95;box-shadow:0 0 4px rgba(0,255,149,.6)}&.down{background:#ff5b5b;box-shadow:0 0 4px rgba(255,91,91,.6)}}
 .kpi-value-wrap{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
 .kpi-number{font-size:20px;font-weight:700;color:#D4AF37;font-family:'Courier New',monospace;text-shadow:0 0 10px rgba(212,175,55,0.4)}
-.kpi-unit{font-size:10px;color:#6a7a8a}
+.kpi-unit{font-size:12px;color:#6a7a8a}
 .kpi-extras{margin-bottom:4px}
-.kpi-change{font-size:10px;font-weight:600;&.up{color:#00ff95}&.down{color:#ff5b5b}.arrow{font-size:9px;margin-right:1px}}
+.kpi-change{font-size:12px;font-weight:600;&.up{color:#00ff95}&.down{color:#ff5b5b}.arrow{font-size:11px;margin-right:1px}}
 .kpi-glow{position:absolute;inset:0;border-radius:8px;pointer-events:none;transition:opacity .4s;opacity:0;&.active{opacity:1;box-shadow:inset 0 0 30px rgba(212,175,55,0.08)}}
 </style>

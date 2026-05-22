@@ -53,7 +53,7 @@ const funnelOption = computed(() => ({
     trigger: 'item',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 },
+    textStyle: { color: '#e0e8f0', fontSize: 13 },
     formatter: '{b}: {c}户'
   },
   series: [{
@@ -70,7 +70,7 @@ const funnelOption = computed(() => ({
       show: true,
       position: 'inside',
       color: '#fff',
-      fontSize: 10,
+      fontSize: 12,
       formatter: '{b}'
     },
     labelLine: { length: 10, lineStyle: { color: 'rgba(0,198,255,0.2)' } },
@@ -78,7 +78,7 @@ const funnelOption = computed(() => ({
       borderColor: 'rgba(7,17,31,0.6)',
       borderWidth: 1
     },
-    emphasis: { label: { fontSize: 12 } },
+    emphasis: { label: { fontSize: 14 } },
     data: [
       { value: 5000000, name: '潜在客户', itemStyle: { color: 'rgba(0,198,255,0.3)' } },
       { value: 3500000, name: '到店客户', itemStyle: { color: 'rgba(0,198,255,0.4)' } },
@@ -96,20 +96,20 @@ const customerTrendOption = computed(() => ({
     trigger: 'axis',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 }
+    textStyle: { color: '#e0e8f0', fontSize: 13 }
   },
-  legend: { data: ['新增','流失','净增'], textStyle: { color: '#8899aa', fontSize: 9 }, bottom: 0 },
+  legend: { data: ['新增','流失','净增'], textStyle: { color: '#8899aa', fontSize: 11 }, bottom: 0 },
   grid: { top: 8, left: 40, right: 8, bottom: 28 },
   xAxis: {
     type: 'category',
     data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
-    axisLabel: { color: '#4a5a6a', fontSize: 8, interval: 1 },
+    axisLabel: { color: '#4a5a6a', fontSize: 10, interval: 1 },
     axisLine: { lineStyle: { color: 'rgba(0,198,255,0.08)' } }
   },
   yAxis: {
     type: 'value',
     splitLine: { lineStyle: { color: 'rgba(0,198,255,0.04)', type: 'dashed' } },
-    axisLabel: { color: '#4a5a6a', fontSize: 8 }
+    axisLabel: { color: '#4a5a6a', fontSize: 10 }
   },
   series: [
     { name: '新增', type: 'bar', barWidth: 6, data: [18000,16000,22000,20000,25000,24000,23000,26000,24000,28000,26000,28500], itemStyle: { color: { type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{offset:0,color:'rgba(0,198,255,0.8)'},{offset:1,color:'rgba(0,198,255,0.2)'}] } } },
@@ -123,7 +123,7 @@ const levelOption = computed(() => ({
     trigger: 'item',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 },
+    textStyle: { color: '#e0e8f0', fontSize: 13 },
     formatter: '{b}: {c}户 ({d}%)'
   },
   series: [{
@@ -138,7 +138,7 @@ const levelOption = computed(() => ({
       { name: '钻石客户', value: 68000, itemStyle: { color: '#33ddff' } },
       { name: '私行客户', value: 3850, itemStyle: { color: '#ffb347', shadowBlur: 10, shadowColor: 'rgba(255,179,71,0.5)' } }
     ],
-    label: { color: '#8899aa', fontSize: 9, formatter: '{b}' },
+    label: { color: '#8899aa', fontSize: 11, formatter: '{b}' },
     labelLine: { lineStyle: { color: 'rgba(0,198,255,0.15)' } },
     itemStyle: { borderRadius: 4 },
     animationType: 'scale',
@@ -151,7 +151,7 @@ const activeOption = computed(() => ({
     formatter: '活跃率: {c}%',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 }
+    textStyle: { color: '#e0e8f0', fontSize: 13 }
   },
   series: [{
     type: 'gauge',
@@ -184,7 +184,7 @@ const activeOption = computed(() => ({
     },
     title: {
       offsetCenter: [0, 55],
-      fontSize: 10,
+      fontSize: 12,
       color: '#4a5a6a'
     },
     data: [{ value: 62.8, name: '活跃率' }]
@@ -200,7 +200,7 @@ const activeOption = computed(() => ({
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #33ddff;
   padding: 8px 12px 2px;
@@ -239,7 +239,7 @@ const activeOption = computed(() => ({
   position: absolute;
   top: 2px;
   left: 6px;
-  font-size: 10px;
+  font-size: 12px;
   color: #4a5a6a;
   z-index: 10;
   letter-spacing: 1px;
@@ -268,12 +268,12 @@ const activeOption = computed(() => ({
 }
 .am-label {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   color: #4a5a6a;
   margin-bottom: 1px;
 }
 .am-value {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   font-family: 'Courier New', monospace;
   &.cyan { color: #33ddff; }

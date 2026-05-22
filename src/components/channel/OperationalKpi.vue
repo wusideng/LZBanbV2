@@ -88,18 +88,16 @@ function getSparkPath(data) {
 <style lang="scss" scoped>
 .ops-kpi-band { padding: 0 16px; margin-bottom: 4px; }
 .section-title {
-  font-size: 13px; font-weight: 600; color: #00ffcc;
+  font-size: 15px; font-weight: 600; color: #00ffcc;
   padding: 6px 0 4px; text-shadow: 0 0 10px rgba(51,221,255,0.3);
   letter-spacing: 2px;
   &::before { content: '◆ '; color: #00d4ff; }
 }
 .kpi-scroll {
   display: flex; gap: 8px; align-items: center;
-  &::-webkit-scrollbar { height: 2px; }
-  &::-webkit-scrollbar-thumb { background: rgba(0,212,255,0.3); }
 }
 .kpi-card {
-  flex: 0 0 150px; padding: 8px 10px;
+  flex: 1; min-width: 0; padding: 8px 10px;
   background: rgba(15,32,56,0.6); border: 1px solid rgba(0,153,255,0.1);
   border-radius: 8px; cursor: pointer; position: relative; overflow: hidden;
   transition: all 0.4s;
@@ -108,17 +106,17 @@ function getSparkPath(data) {
 }
 @keyframes flowBorder { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
 .kpi-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
-.kpi-label { font-size: 10px; color: #8899aa; white-space: nowrap; }
+.kpi-label { font-size: 12px; color: #8899aa; white-space: nowrap; }
 .kpi-dot { width: 5px; height: 5px; border-radius: 50%; &.up{background:#00ff95;box-shadow:0 0 4px rgba(0,255,149,0.6)} &.down{background:#ff5b5b;box-shadow:0 0 4px rgba(255,91,91,0.6)} }
 .kpi-value-wrap { display: flex; align-items: baseline; gap: 4px; margin-bottom: 4px; }
-.kpi-number { font-size: 18px; font-weight: 700; color: #00ffcc; font-family: 'Courier New',monospace; text-shadow:0 0 8px rgba(51,221,255,0.3); }
-.kpi-unit { font-size: 10px; color: #4a5a6a; }
+.kpi-number { font-size: 20px; font-weight: 700; color: #00ffcc; font-family: 'Courier New',monospace; text-shadow:0 0 8px rgba(51,221,255,0.3); }
+.kpi-unit { font-size: 12px; color: #4a5a6a; }
 .kpi-extras { margin-bottom: 4px; }
-.kpi-change { font-size: 10px; font-weight: 600; &.up{color:#00ff95} &.down{color:#ff5b5b} .arrow{font-size:9px;margin-right:1px} }
+.kpi-change { font-size: 12px; font-weight: 600; &.up{color:#00ff95} &.down{color:#ff5b5b} .arrow{font-size:11px;margin-right:1px} }
 
-.gauge-group { display: flex; gap: 12px; flex: 0 0 200px; padding: 0 12px; }
+.gauge-group { display: flex; gap: 12px; flex: 1; padding: 0 12px; }
 .mini-gauge { flex: 1; text-align: center; }
-.gauge-label { font-size: 10px; color: #8899aa; margin-bottom: 4px; }
+.gauge-label { font-size: 12px; color: #8899aa; margin-bottom: 4px; }
 .gauge-value { font-size: 22px; font-weight: 700; font-family: 'Courier New',monospace; margin-bottom: 4px; &.up{color:#00ff95} &.down{color:#ff5b5b} }
 .gauge-bar { height: 4px; background: rgba(0,153,255,0.1); border-radius: 2px; overflow: hidden; }
 .gauge-fill { height: 100%; border-radius: 2px; transition: width 1s ease; &.up{background:linear-gradient(90deg,#00ff95,#00ffcc)} &.down{background:linear-gradient(90deg,#ff5b5b,#ffb347)} }

@@ -106,7 +106,7 @@ const radarOption = computed(() => ({
     ],
     center: ['50%', '50%'],
     radius: '60%',
-    axisName: { color: '#8899aa', fontSize: 10 },
+    axisName: { color: '#8899aa', fontSize: 12 },
     splitArea: { areaStyle: { color: ['rgba(0,198,255,0.02)','rgba(0,198,255,0.01)'] } },
     axisLine: { lineStyle: { color: 'rgba(0,198,255,0.15)' } },
     splitLine: { lineStyle: { color: 'rgba(0,198,255,0.1)' } }
@@ -128,19 +128,19 @@ const dualAxisOption = computed(() => ({
     trigger: 'axis',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 }
+    textStyle: { color: '#e0e8f0', fontSize: 13 }
   },
-  legend: { data: ['利息净收入','手续费净收入'], textStyle: { color: '#8899aa', fontSize: 10 }, bottom: 0 },
+  legend: { data: ['利息净收入','手续费净收入'], textStyle: { color: '#8899aa', fontSize: 12 }, bottom: 0 },
   grid: { top: 12, left: 45, right: 45, bottom: 32 },
   xAxis: {
     type: 'category',
     data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
-    axisLabel: { color: '#4a5a6a', fontSize: 9 },
+    axisLabel: { color: '#4a5a6a', fontSize: 11 },
     axisLine: { lineStyle: { color: 'rgba(0,198,255,0.1)' } }
   },
   yAxis: [
-    { type: 'value', name: '利息(亿)', nameTextStyle: { color: '#4a5a6a', fontSize: 9 }, splitLine: { lineStyle: { color: 'rgba(0,198,255,0.05)', type: 'dashed' } }, axisLabel: { color: '#4a5a6a', fontSize: 9 } },
-    { type: 'value', name: '手续费(亿)', nameTextStyle: { color: '#4a5a6a', fontSize: 9 }, splitLine: { show: false }, axisLabel: { color: '#4a5a6a', fontSize: 9 } }
+    { type: 'value', name: '利息(亿)', nameTextStyle: { color: '#4a5a6a', fontSize: 11 }, splitLine: { lineStyle: { color: 'rgba(0,198,255,0.05)', type: 'dashed' } }, axisLabel: { color: '#4a5a6a', fontSize: 11 } },
+    { type: 'value', name: '手续费(亿)', nameTextStyle: { color: '#4a5a6a', fontSize: 11 }, splitLine: { show: false }, axisLabel: { color: '#4a5a6a', fontSize: 11 } }
   ],
   series: [
     { name: '利息净收入', type: 'line', data: [22,23,24,25,26,27,27.5,28,28.2,28.5,28.3,28.5], smooth: true, symbol: 'none', lineStyle: { color: '#0099ff', width: 2 }, areaStyle: { color: { type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: 'rgba(0,198,255,0.3)' }, { offset: 1, color: 'rgba(0,198,255,0.01)' }] } } },
@@ -153,7 +153,7 @@ const structureOption = computed(() => ({
     trigger: 'item',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 },
+    textStyle: { color: '#e0e8f0', fontSize: 13 },
     formatter: '{b}: {c}亿 ({d}%)'
   },
   series: [{
@@ -166,7 +166,7 @@ const structureOption = computed(() => ({
       { name: '投资收益', value: 45, itemStyle: { color: '#ffb347' } },
       { name: '其他收入', value: 22, itemStyle: { color: '#4a5a6a' } }
     ],
-    label: { color: '#8899aa', fontSize: 9, formatter: '{b}' },
+    label: { color: '#8899aa', fontSize: 11, formatter: '{b}' },
     labelLine: { lineStyle: { color: 'rgba(0,198,255,0.2)' } },
     itemStyle: { borderRadius: 4 },
     animationType: 'scale',
@@ -183,7 +183,7 @@ const structureOption = computed(() => ({
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #33ddff;
   padding: 8px 12px 4px;
@@ -296,7 +296,7 @@ const structureOption = computed(() => ({
   z-index: 2;
   text-align: center;
 }
-.core-label { font-size: 11px; color: #8899aa; margin-bottom: 4px; letter-spacing: 2px; }
+.core-label { font-size: 13px; color: #8899aa; margin-bottom: 4px; letter-spacing: 2px; }
 .core-value {
   .num {
     font-size: 36px;
@@ -305,7 +305,7 @@ const structureOption = computed(() => ({
     font-family: 'Courier New', monospace;
     text-shadow: 0 0 20px rgba(51, 221, 255, 0.5);
   }
-  .unit { font-size: 13px; color: #4a5a6a; margin-left: 4px; }
+  .unit { font-size: 15px; color: #4a5a6a; margin-left: 4px; }
 }
 .core-divider {
   width: 60px; height: 1px;
@@ -321,7 +321,7 @@ const structureOption = computed(() => ({
 .sub-item {
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 12px;
 }
 .sub-label { color: #4a5a6a; }
 .sub-value { color: #0099ff; font-weight: 600; }
@@ -353,8 +353,8 @@ const structureOption = computed(() => ({
     background: rgba(10, 30, 60, 0.4);
     border-radius: 6px;
     border: 1px solid rgba(0, 153, 255, 0.08);
-    .m-label { display: block; font-size: 10px; color: #4a5a6a; margin-bottom: 2px; }
-    .m-value { font-size: 14px; font-weight: 700; color: #0099ff; font-family: 'Courier New', monospace; }
+    .m-label { display: block; font-size: 12px; color: #4a5a6a; margin-bottom: 2px; }
+    .m-value { font-size: 16px; font-weight: 700; color: #0099ff; font-family: 'Courier New', monospace; }
   }
 }
 

@@ -327,12 +327,12 @@ onUnmounted(() => {
   gap: 0;
 }
 .status-label {
-  font-size: 9px;
+  font-size: 11px;
   color: #4a5a6a;
   letter-spacing: 1px;
 }
 .status-text {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   color: #33ddff;
 }
@@ -371,7 +371,7 @@ onUnmounted(() => {
 
   .deco-arrow {
     color: rgba(0, 153, 255, 0.6);
-    font-size: 8px;
+    font-size: 10px;
     animation: arrowPulse 2s ease-in-out infinite;
   }
 }
@@ -454,7 +454,7 @@ onUnmounted(() => {
   gap: 4px;
 
   .deco-text {
-    font-size: 9px;
+    font-size: 11px;
     color: rgba(51, 221, 255, 0.25);
     letter-spacing: 6px;
   }
@@ -481,7 +481,7 @@ onUnmounted(() => {
   gap: 8px;
 }
 .time-icon {
-  font-size: 16px;
+  font-size: 18px;
   animation: breathe 2s ease-in-out infinite;
 }
 .time-value {
@@ -495,7 +495,7 @@ onUnmounted(() => {
 
 .date-wrap {
   .date-value {
-    font-size: 12px;
+    font-size: 14px;
     color: #8899aa;
     white-space: nowrap;
     font-family: 'Courier New', monospace;
@@ -509,12 +509,12 @@ onUnmounted(() => {
   gap: 1px;
 }
 .update-label {
-  font-size: 9px;
+  font-size: 11px;
   color: #4a5a6a;
   letter-spacing: 1px;
 }
 .update-value {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #33ddff;
   font-family: 'Courier New', monospace;

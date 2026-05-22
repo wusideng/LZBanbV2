@@ -40,20 +40,20 @@ const alTrendOption = computed(() => ({
     trigger: 'axis',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 }
+    textStyle: { color: '#e0e8f0', fontSize: 13 }
   },
-  legend: { data: ['总资产','总负债'], textStyle: { color: '#8899aa', fontSize: 10 }, bottom: 0 },
+  legend: { data: ['总资产','总负债'], textStyle: { color: '#8899aa', fontSize: 12 }, bottom: 0 },
   grid: { top: 8, left: 40, right: 8, bottom: 30 },
   xAxis: {
     type: 'category',
     data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
-    axisLabel: { color: '#4a5a6a', fontSize: 8, interval: 1 },
+    axisLabel: { color: '#4a5a6a', fontSize: 10, interval: 1 },
     axisLine: { lineStyle: { color: 'rgba(0,198,255,0.08)' } }
   },
   yAxis: {
     type: 'value',
     splitLine: { lineStyle: { color: 'rgba(0,198,255,0.04)', type: 'dashed' } },
-    axisLabel: { color: '#4a5a6a', fontSize: 8 }
+    axisLabel: { color: '#4a5a6a', fontSize: 10 }
   },
   series: [
     { name: '总资产', type: 'line', data: [1150,1168,1180,1195,1205,1218,1225,1235,1240,1248,1252,1256.3], smooth: true, symbol: 'none', lineStyle: { color: '#0099ff', width: 2 }, areaStyle: { color: { type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: 'rgba(0,198,255,0.25)' }, { offset: 1, color: 'rgba(0,198,255,0.01)' }] } } },
@@ -66,20 +66,20 @@ const depLoanOption = computed(() => ({
     trigger: 'axis',
     backgroundColor: 'rgba(7,17,31,0.9)',
     borderColor: 'rgba(0,198,255,0.3)',
-    textStyle: { color: '#e0e8f0', fontSize: 11 }
+    textStyle: { color: '#e0e8f0', fontSize: 13 }
   },
-  legend: { data: ['存款余额','贷款余额'], textStyle: { color: '#8899aa', fontSize: 10 }, bottom: 0 },
+  legend: { data: ['存款余额','贷款余额'], textStyle: { color: '#8899aa', fontSize: 12 }, bottom: 0 },
   grid: { top: 8, left: 40, right: 8, bottom: 30 },
   xAxis: {
     type: 'category',
     data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
-    axisLabel: { color: '#4a5a6a', fontSize: 8, interval: 1 },
+    axisLabel: { color: '#4a5a6a', fontSize: 10, interval: 1 },
     axisLine: { lineStyle: { color: 'rgba(0,198,255,0.08)' } }
   },
   yAxis: {
     type: 'value',
     splitLine: { lineStyle: { color: 'rgba(0,198,255,0.04)', type: 'dashed' } },
-    axisLabel: { color: '#4a5a6a', fontSize: 8 }
+    axisLabel: { color: '#4a5a6a', fontSize: 10 }
   },
   series: [
     { name: '存款余额', type: 'line', data: [480,488,492,498,502,508,510,515,518,520,522,523.5], smooth: true, symbol: 'none', lineStyle: { color: '#0099ff', width: 2 }, areaStyle: { color: { type: 'linear', x: 0, y: 0, x2: 0, y2: 1, colorStops: [{ offset: 0, color: 'rgba(0,198,255,0.25)' }, { offset: 1, color: 'rgba(0,198,255,0.01)' }] } } },
@@ -93,7 +93,7 @@ function makeRingOption(data, colors) {
       trigger: 'item',
       backgroundColor: 'rgba(7,17,31,0.9)',
       borderColor: 'rgba(0,198,255,0.3)',
-      textStyle: { color: '#e0e8f0', fontSize: 10 },
+      textStyle: { color: '#e0e8f0', fontSize: 12 },
       formatter: '{b}: {c}亿 ({d}%)'
     },
     series: [{
@@ -104,7 +104,7 @@ function makeRingOption(data, colors) {
         ...d,
         itemStyle: { color: colors[i % colors.length] }
       })),
-      label: { color: '#4a5a6a', fontSize: 8, formatter: '{b}' },
+      label: { color: '#4a5a6a', fontSize: 10, formatter: '{b}' },
       labelLine: { lineStyle: { color: 'rgba(0,198,255,0.1)' } },
       animationDuration: 1000,
       animationType: 'scale'
@@ -138,7 +138,7 @@ const incomeOption = computed(() => makeRingOption(
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #33ddff;
   padding: 8px 12px 2px;
@@ -175,7 +175,7 @@ const incomeOption = computed(() => makeRingOption(
   position: absolute;
   top: 2px;
   left: 6px;
-  font-size: 10px;
+  font-size: 12px;
   color: #4a5a6a;
   z-index: 10;
   letter-spacing: 1px;

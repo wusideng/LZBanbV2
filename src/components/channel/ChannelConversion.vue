@@ -33,11 +33,11 @@ const metrics = [
 ]
 
 const funnelOption = computed(() => ({
-  tooltip:{trigger:'item',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:12},formatter:'{b}: {c}户'},
+  tooltip:{trigger:'item',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:14},formatter:'{b}: {c}户'},
   series:[{
     type:'funnel',left:'5%',right:'15%',top:15,bottom:8,
     minSize:'8%',maxSize:'100%',sort:'descending',gap:1,
-    label:{show:true,position:'inside',color:'#fff',fontSize:10,formatter:'{b}'},
+    label:{show:true,position:'inside',color:'#fff',fontSize:12,formatter:'{b}'},
     itemStyle:{borderColor:'rgba(0,0,0,0.6)',borderWidth:1},
     data:[
       {value:5862000,name:'开户',itemStyle:{color:'rgba(0,212,255,0.3)'}},
@@ -53,11 +53,11 @@ const funnelOption = computed(() => ({
 }))
 
 const churnOption = computed(() => ({
-  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:11}},
-  legend:{data:['高风险','沉默客户'],textStyle:{color:'#8899aa',fontSize:9},bottom:0},
+  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:13}},
+  legend:{data:['高风险','沉默客户'],textStyle:{color:'#8899aa',fontSize:11},bottom:0},
   grid:{top:6,left:28,right:4,bottom:22},
-  xAxis:{type:'category',data:['1月','2月','3月','4月','5月','6月'],axisLabel:{color:'#4a5a6a',fontSize:9},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
-  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:9}},
+  xAxis:{type:'category',data:['1月','2月','3月','4月','5月','6月'],axisLabel:{color:'#4a5a6a',fontSize:11},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:11}},
   series:[
     {name:'高风险',type:'bar',barWidth:6,data:[32,35,38,42,45,48],itemStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(255,91,91,0.8)'},{offset:1,color:'rgba(255,91,91,0.2)'}]}}},
     {name:'沉默客户',type:'bar',barWidth:6,data:[120,125,130,135,140,145],itemStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(255,179,71,0.7)'},{offset:1,color:'rgba(255,179,71,0.2)'}]}}}
@@ -67,12 +67,12 @@ const churnOption = computed(() => ({
 
 <style lang="scss" scoped>
 .channel-conversion { height:100%; display:flex; flex-direction:column; }
-.section-title { font-size:13px; font-weight:600; color:#00ffcc; padding:8px 12px 2px; text-shadow:0 0 10px rgba(0,255,204,0.3); letter-spacing:2px; flex-shrink:0; &::before{content:'◆ ';color:#00d4ff} }
+.section-title { font-size:15px; font-weight:600; color:#00ffcc; padding:8px 12px 2px; text-shadow:0 0 10px rgba(0,255,204,0.3); letter-spacing:2px; flex-shrink:0; &::before{content:'◆ ';color:#00d4ff} }
 .cc-content { flex:1; display:flex; flex-direction:column; gap:3px; padding:0 6px 6px; min-height:0; }
 .cc-chart { position:relative; min-height:0; }
 .funnel-chart { flex:0 0 40%; }
 .churn-chart { flex:0 0 34%; }
-.chart-label { position:absolute; top:2px; left:6px; font-size:10px; color:#4a5a6a; z-index:10; letter-spacing:1px; }
+.chart-label { position:absolute; top:2px; left:6px; font-size:12px; color:#4a5a6a; z-index:10; letter-spacing:1px; }
 
 .cc-metrics {
   flex:0 0 22%;
@@ -88,7 +88,7 @@ const churnOption = computed(() => ({
   border: 1px solid rgba(0,212,255,0.08);
   border-radius: 6px;
 }
-.cm-label { display:block; font-size:9px; color:#4a5a6a; margin-bottom:2px; }
-.cm-value { display:block; font-size:18px; font-weight:700; font-family:'Courier New',monospace; }
-.cm-change { font-size:9px; font-weight:600; &.up{color:#00ff95} &.down{color:#ff5b5b} }
+.cm-label { display:block; font-size:11px; color:#4a5a6a; margin-bottom:2px; }
+.cm-value { display:block; font-size:20px; font-weight:700; font-family:'Courier New',monospace; }
+.cm-change { font-size:11px; font-weight:600; &.up{color:#00ff95} &.down{color:#ff5b5b} }
 </style>

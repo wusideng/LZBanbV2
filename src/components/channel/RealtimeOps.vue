@@ -94,10 +94,10 @@ onUnmounted(() => {
 })
 
 const peakOption = computed(() => ({
-  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:11}},
+  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,212,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:13}},
   grid:{top:6,left:32,right:4,bottom:10},
-  xAxis:{type:'category',data:['0点','4点','8点','12点','16点','20点'],axisLabel:{color:'#4a5a6a',fontSize:10},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
-  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:10}},
+  xAxis:{type:'category',data:['0点','4点','8点','12点','16点','20点'],axisLabel:{color:'#4a5a6a',fontSize:12},axisLine:{lineStyle:{color:'rgba(0,212,255,0.08)'}}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,212,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:12}},
   series:[{
     name:'并发峰值',type:'line',data:[12,8,85,72,68,88],smooth:true,symbol:'none',
     lineStyle:{color:'#00d4ff',width:2},
@@ -114,26 +114,26 @@ const peakOption = computed(() => ({
 .ops-right { flex:0 0 22%; }
 .ops-alert { flex:0 0 26%; }
 
-.section-title { font-size:12px; font-weight:600; color:#00ffcc; padding:4px 10px; text-shadow:0 0 10px rgba(0,255,204,0.3); letter-spacing:2px; flex-shrink:0; border-bottom:1px solid rgba(0,212,255,0.06); &::before{content:'◆ ';color:#00d4ff} }
+.section-title { font-size:14px; font-weight:600; color:#00ffcc; padding:4px 10px; text-shadow:0 0 10px rgba(0,255,204,0.3); letter-spacing:2px; flex-shrink:0; border-bottom:1px solid rgba(0,212,255,0.06); &::before{content:'◆ ';color:#00d4ff} }
 .alert-title { color:#ff5b5b; text-shadow:0 0 10px rgba(255,91,91,0.3); }
 
 .counter-row { display:flex; justify-content:space-around; align-items:center; flex:1; padding:4px; }
 .counter-item { text-align:center; }
-.counter-label { display:block; font-size:9px; color:#4a5a6a; margin-bottom:2px; }
+.counter-label { display:block; font-size:11px; color:#4a5a6a; margin-bottom:2px; }
 .counter-value { display:block; font-size:22px; font-weight:700; color:#00ffcc; font-family:'Courier New',monospace; animation:countPulse 2s ease-in-out infinite; }
-.counter-unit { display:block; font-size:10px; color:#4a5a6a; margin-top:2px; }
+.counter-unit { display:block; font-size:12px; color:#4a5a6a; margin-top:2px; }
 @keyframes countPulse { 0%,100%{opacity:0.8} 50%{opacity:1;text-shadow:0 0 10px rgba(0,255,204,0.4)} }
 
 .peak-chart { flex:1; min-height:0; }
 
 .hot-scroll, .alert-scroll { flex:1; overflow:hidden; position:relative; }
 .hot-list, .alert-list { transition:none; }
-.hot-item { display:flex; align-items:center; gap:6px; padding:3px 10px; height:26px; font-size:10px; border-bottom:1px solid rgba(0,212,255,0.03); }
-.hot-rank { width:16px; text-align:center; color:#8899aa; font-size:9px; font-weight:600; }
+.hot-item { display:flex; align-items:center; gap:6px; padding:3px 10px; height:26px; font-size:12px; border-bottom:1px solid rgba(0,212,255,0.03); }
+.hot-rank { width:16px; text-align:center; color:#8899aa; font-size:11px; font-weight:600; }
 .hot-name { flex:1; color:#e0e8f0; }
 .hot-count { width:44px; text-align:right; color:#00ffcc; font-family:'Courier New',monospace; }
 
-.alert-item { display:flex; align-items:center; gap:6px; padding:3px 10px; height:26px; font-size:10px; border-bottom:1px solid rgba(0,212,255,0.03); }
+.alert-item { display:flex; align-items:center; gap:6px; padding:3px 10px; height:26px; font-size:12px; border-bottom:1px solid rgba(0,212,255,0.03); }
 .alert-dot { width:5px; height:5px; border-radius:50%; flex-shrink:0; }
 .alert-item.high .alert-dot { background:#ff5b5b; box-shadow:0 0 6px rgba(255,91,91,0.6); animation:breathe 0.8s infinite; }
 .alert-item.mid .alert-dot { background:#ffb347; box-shadow:0 0 6px rgba(255,179,71,0.6); }

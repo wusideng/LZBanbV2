@@ -31,7 +31,7 @@ import { computed } from 'vue'
 import BaseChart from '@/components/common/BaseChart.vue'
 
 const incomeOption = computed(() => ({
-  tooltip:{trigger:'item',backgroundColor:'rgba(11,34,53,0.95)',borderColor:'rgba(212,175,55,0.3)',textStyle:{color:'#e0e8f0',fontSize:12},formatter:'{b}: {c}亿 ({d}%)'},
+  tooltip:{trigger:'item',backgroundColor:'rgba(11,34,53,0.95)',borderColor:'rgba(212,175,55,0.3)',textStyle:{color:'#e0e8f0',fontSize:14},formatter:'{b}: {c}亿 ({d}%)'},
   series:[{
     type:'pie',radius:['45%','70%'],center:['50%','50%'],
     data:[
@@ -41,7 +41,7 @@ const incomeOption = computed(() => ({
       {name:'信托中收',value:0.7,itemStyle:{color:'rgba(0,207,255,0.5)'}},
       {name:'其他中收',value:0.4,itemStyle:{color:'#4a5a6a'}}
     ],
-    label:{color:'#8899aa',fontSize:11,formatter:'{b}'},
+    label:{color:'#8899aa',fontSize:13,formatter:'{b}'},
     labelLine:{lineStyle:{color:'rgba(212,175,55,0.15)'}},
     itemStyle:{borderRadius:4},
     animationType:'scale',animationDuration:1200
@@ -49,10 +49,10 @@ const incomeOption = computed(() => ({
 }))
 
 const trendOption = computed(() => ({
-  tooltip:{trigger:'axis',backgroundColor:'rgba(11,34,53,0.95)',borderColor:'rgba(212,175,55,0.3)',textStyle:{color:'#e0e8f0',fontSize:11}},
+  tooltip:{trigger:'axis',backgroundColor:'rgba(11,34,53,0.95)',borderColor:'rgba(212,175,55,0.3)',textStyle:{color:'#e0e8f0',fontSize:13}},
   grid:{top:8,left:36,right:6,bottom:10},
-  xAxis:{type:'category',data:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],axisLabel:{color:'#4a5a6a',fontSize:9,interval:1},axisLine:{lineStyle:{color:'rgba(212,175,55,0.08)'}}},
-  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(212,175,55,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:9}},
+  xAxis:{type:'category',data:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],axisLabel:{color:'#4a5a6a',fontSize:11,interval:1},axisLine:{lineStyle:{color:'rgba(212,175,55,0.08)'}}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(212,175,55,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:11}},
   series:[{
     name:'中收',type:'line',data:[6.5,6.8,7.0,7.2,7.5,7.8,8.0,8.2,8.3,8.5,8.5,8.6],
     smooth:true,symbol:'none',
@@ -67,14 +67,14 @@ const trendOption = computed(() => ({
 .wi-left,.wi-right{display:flex;flex-direction:column;background:rgba(11,34,53,0.4);border:1px solid rgba(212,175,55,0.08);border-radius:8px;overflow:hidden}
 .wi-left{flex:1}
 .wi-right{flex:0 0 22%}
-.section-title{font-size:12px;font-weight:600;color:#D4AF37;padding:4px 10px;text-shadow:0 0 10px rgba(212,175,55,0.4);letter-spacing:2px;flex-shrink:0;border-bottom:1px solid rgba(212,175,55,0.06);&::before{content:'◆ ';color:#00CFFF}}
+.section-title{font-size:14px;font-weight:600;color:#D4AF37;padding:4px 10px;text-shadow:0 0 10px rgba(212,175,55,0.4);letter-spacing:2px;flex-shrink:0;border-bottom:1px solid rgba(212,175,55,0.06);&::before{content:'◆ ';color:#00CFFF}}
 .wi-content{flex:1;display:flex;gap:4px;padding:4px;min-height:0}
 .wi-chart{flex:1;position:relative;min-height:0}
-.chart-label{position:absolute;top:2px;left:6px;font-size:10px;color:#4a5a6a;z-index:10;letter-spacing:1px}
+.chart-label{position:absolute;top:2px;left:6px;font-size:12px;color:#4a5a6a;z-index:10;letter-spacing:1px}
 .wi-metrics{flex:1;display:flex;flex-direction:column;gap:6px;padding:8px;justify-content:center}
 .wim-item{display:flex;align-items:center;gap:6px;padding:6px 8px;background:rgba(11,34,53,0.3);border:1px solid rgba(212,175,55,0.06);border-radius:6px}
-.wim-lbl{font-size:10px;color:#4a5a6a;flex:1}
-.wim-val{font-size:14px;font-weight:700;font-family:'Courier New',monospace;&.gold{color:#D4AF37}&.cyan{color:#00CFFF}}
-.wim-pct{font-size:10px;color:#8899aa}
-.wi-total{text-align:center;padding:6px;font-size:11px;color:#8899aa;border-top:1px solid rgba(212,175,55,0.06);flex-shrink:0;& strong{color:#D4AF37;font-size:16px;font-family:'Courier New',monospace}& .wi-ratio{color:#00CFFF;font-size:10px;margin-left:4px}}
+.wim-lbl{font-size:12px;color:#4a5a6a;flex:1}
+.wim-val{font-size:16px;font-weight:700;font-family:'Courier New',monospace;&.gold{color:#D4AF37}&.cyan{color:#00CFFF}}
+.wim-pct{font-size:12px;color:#8899aa}
+.wi-total{text-align:center;padding:6px;font-size:13px;color:#8899aa;border-top:1px solid rgba(212,175,55,0.06);flex-shrink:0;& strong{color:#D4AF37;font-size:18px;font-family:'Courier New',monospace}& .wi-ratio{color:#00CFFF;font-size:12px;margin-left:4px}}
 </style>

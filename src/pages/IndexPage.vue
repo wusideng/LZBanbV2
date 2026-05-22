@@ -67,7 +67,7 @@ function goTo(path) {
   margin-bottom: 12px;
 }
 .index-subtitle {
-  font-size: 16px;
+  font-size: 18px;
   color: #4a5a6a;
   letter-spacing: 4px;
   margin-bottom: 60px;
@@ -96,18 +96,18 @@ function goTo(path) {
 }
 .card-icon { font-size: 48px; margin-bottom: 16px; }
 .card-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #33ddff;
   margin-bottom: 8px;
 }
 .card-desc {
-  font-size: 13px;
+  font-size: 15px;
   color: #8899aa;
   margin-bottom: 16px;
 }
 .card-status {
-  font-size: 12px;
+  font-size: 14px;
   color: #00ff95;
   .dot {
     display: inline-block;

@@ -88,7 +88,7 @@ const indicatorOption = computed(() => ({
       { name: '运营热度', max: 100 }
     ],
     center: ['50%','50%'], radius: '60%',
-    axisName: { color: '#8899aa', fontSize: 9 },
+    axisName: { color: '#8899aa', fontSize: 11 },
     splitArea: { areaStyle: { color: ['rgba(0,212,255,0.02)','rgba(0,212,255,0.01)'] } },
     axisLine: { lineStyle: { color: 'rgba(0,212,255,0.12)' } },
     splitLine: { lineStyle: { color: 'rgba(0,212,255,0.08)' } }
@@ -109,7 +109,7 @@ const indicatorOption = computed(() => ({
 
 <style lang="scss" scoped>
 .user-center { height:100%; display:flex; flex-direction:column; }
-.section-title { font-size:13px; font-weight:600; color:#00ffcc; padding:8px 12px 2px; text-shadow:0 0 10px rgba(0,255,204,0.3); letter-spacing:2px; flex-shrink:0; &::before{content:'◆ ';color:#00d4ff} }
+.section-title { font-size:15px; font-weight:600; color:#00ffcc; padding:8px 12px 2px; text-shadow:0 0 10px rgba(0,255,204,0.3); letter-spacing:2px; flex-shrink:0; &::before{content:'◆ ';color:#00d4ff} }
 .uc-content { flex:1; display:flex; gap:6px; padding:4px 8px 6px; min-height:0; }
 .uc-left { flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; }
 .uc-right { flex:0 0 30%; display:flex; flex-direction:column; min-height:0; }
@@ -127,9 +127,9 @@ const indicatorOption = computed(() => ({
 @keyframes particlePulse { 0%,100%{opacity:0.2;transform:translate(-50%,-50%) scale(0.5)} 50%{opacity:1;transform:translate(-50%,-50%) scale(1.2)} }
 
 .core-text { position:relative; z-index:2; text-align:center; }
-.core-lbl { font-size:10px; color:#8899aa; margin-bottom:4px; letter-spacing:2px; }
+.core-lbl { font-size:12px; color:#8899aa; margin-bottom:4px; letter-spacing:2px; }
 .core-num { font-size:28px; font-weight:700; color:#00ffcc; font-family:'Courier New',monospace; text-shadow:0 0 20px rgba(0,255,204,0.5); }
-.core-unit { font-size:11px; color:#4a5a6a; }
+.core-unit { font-size:13px; color:#4a5a6a; }
 
 .ripple { position:absolute; border-radius:50%; border:1px solid rgba(0,212,255,0.15); animation:rippleExpand 3.5s ease-out infinite; pointer-events:none;
   &.r1{width:180px;height:180px;animation-delay:0s} &.r2{width:200px;height:200px;animation-delay:1.2s} &.r3{width:220px;height:220px;animation-delay:2.4s}
@@ -138,10 +138,10 @@ const indicatorOption = computed(() => ({
 
 .center-radar { flex:1; width:100%; min-height:0; }
 
-.uc-flow-header { font-size:10px; color:#00ffcc; letter-spacing:2px; padding:2px 4px; flex-shrink:0; }
+.uc-flow-header { font-size:12px; color:#00ffcc; letter-spacing:2px; padding:2px 4px; flex-shrink:0; }
 .uc-flow-body { flex:1; overflow:hidden; position:relative; }
 .flow-scroll { transition:none; }
-.flow-item { display:flex; align-items:center; gap:6px; padding:4px 6px; height:30px; font-size:11px; color:#8899aa; border-bottom:1px solid rgba(0,212,255,0.04); }
-.flow-icon { color:#ffb347; font-size:10px; flex-shrink:0; }
+.flow-item { display:flex; align-items:center; gap:6px; padding:4px 6px; height:30px; font-size:13px; color:#8899aa; border-bottom:1px solid rgba(0,212,255,0.04); }
+.flow-icon { color:#ffb347; font-size:12px; flex-shrink:0; }
 .flow-text { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 </style>

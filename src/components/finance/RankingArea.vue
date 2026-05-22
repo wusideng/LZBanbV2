@@ -129,7 +129,7 @@ onUnmounted(() => {
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #33ddff;
   padding: 6px 12px;
@@ -150,7 +150,7 @@ onUnmounted(() => {
 .ranking-table-header {
   display: flex;
   padding: 6px 12px;
-  font-size: 11px;
+  font-size: 13px;
   color: #4a5a6a;
   border-bottom: 1px solid rgba(0, 153, 255, 0.06);
   flex-shrink: 0;
@@ -169,7 +169,7 @@ onUnmounted(() => {
 .ranking-row {
   display: flex;
   padding: 6px 12px;
-  font-size: 12px;
+  font-size: 14px;
   color: #8899aa;
   border-bottom: 1px solid rgba(0, 153, 255, 0.03);
   transition: background 0.3s;
@@ -185,10 +185,10 @@ onUnmounted(() => {
 
 .col-rank { flex: 0 0 50px; text-align: center; }
 .col-name { flex: 1; }
-.col-num { flex: 0 0 72px; text-align: right; font-family: 'Courier New', monospace; font-size: 11px; }
+.col-num { flex: 0 0 72px; text-align: right; font-family: 'Courier New', monospace; font-size: 13px; }
 .growth { color: #00ff95; }
 
-.medal { font-size: 16px; }
+.medal { font-size: 18px; }
 .rank-num { color: #4a5a6a; }
 
 .heat-chart-wrap {
@@ -212,7 +212,7 @@ onUnmounted(() => {
 
 .heat-name {
   flex: 0 0 56px;
-  font-size: 11px;
+  font-size: 13px;
   color: #8899aa;
   text-align: right;
 }
@@ -235,7 +235,7 @@ onUnmounted(() => {
 
 .heat-value {
   flex: 0 0 50px;
-  font-size: 11px;
+  font-size: 13px;
   color: #33ddff;
   font-family: 'Courier New', monospace;
   text-align: right;

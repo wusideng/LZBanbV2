@@ -48,11 +48,11 @@ function formatNum(v) {
 }
 
 const funnelOption = computed(() => ({
-  tooltip: { trigger:'item', backgroundColor:'rgba(0,0,0,0.9)', borderColor:'rgba(0,153,255,0.3)', textStyle:{color:'#e0e8f0',fontSize:12}, formatter:'{b}: {c}户' },
+  tooltip: { trigger:'item', backgroundColor:'rgba(0,0,0,0.9)', borderColor:'rgba(0,153,255,0.3)', textStyle:{color:'#e0e8f0',fontSize:14}, formatter:'{b}: {c}户' },
   series: [{
     type:'funnel', left:'10%', right:'15%', top:20, bottom:10,
     minSize:'10%', maxSize:'100%', sort:'descending', gap:2,
-    label:{show:true,position:'inside',color:'#fff',fontSize:11,formatter:'{b}'},
+    label:{show:true,position:'inside',color:'#fff',fontSize:13,formatter:'{b}'},
     itemStyle:{borderColor:'rgba(0,0,0,0.6)',borderWidth:1},
     data:[
       {value:8000000,name:'潜在用户',itemStyle:{color:'rgba(0,153,255,0.25)'}},
@@ -67,11 +67,11 @@ const funnelOption = computed(() => ({
 }))
 
 const activeTrendOption = computed(() => ({
-  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,153,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:12}},
-  legend:{data:['MAU','DAU'],textStyle:{color:'#8899aa',fontSize:11},bottom:0},
+  tooltip:{trigger:'axis',backgroundColor:'rgba(0,0,0,0.9)',borderColor:'rgba(0,153,255,0.3)',textStyle:{color:'#e0e8f0',fontSize:14}},
+  legend:{data:['MAU','DAU'],textStyle:{color:'#8899aa',fontSize:13},bottom:0},
   grid:{top:8,left:36,right:8,bottom:28},
-  xAxis:{type:'category',data:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],axisLabel:{color:'#4a5a6a',fontSize:10,interval:1},axisLine:{lineStyle:{color:'rgba(0,153,255,0.08)'}}},
-  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,153,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:10}},
+  xAxis:{type:'category',data:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],axisLabel:{color:'#4a5a6a',fontSize:12,interval:1},axisLine:{lineStyle:{color:'rgba(0,153,255,0.08)'}}},
+  yAxis:{type:'value',splitLine:{lineStyle:{color:'rgba(0,153,255,0.04)',type:'dashed'}},axisLabel:{color:'#4a5a6a',fontSize:12}},
   series:[
     {name:'MAU',type:'line',data:[1680,1700,1720,1750,1760,1780,1775,1790,1800,1810,1820,1826],smooth:true,symbol:'none',lineStyle:{color:'#00d4ff',width:2},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(0,153,255,0.25)'},{offset:1,color:'rgba(0,153,255,0.01)'}]}}},
     {name:'DAU',type:'line',data:[550,555,560,565,570,575,572,578,580,582,585,586.2],smooth:true,symbol:'none',lineStyle:{color:'#00ffcc',width:2},areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,colorStops:[{offset:0,color:'rgba(51,221,255,0.2)'},{offset:1,color:'rgba(51,221,255,0.01)'}]}}}
@@ -81,20 +81,20 @@ const activeTrendOption = computed(() => ({
 
 <style lang="scss" scoped>
 .user-growth { height: 100%; display: flex; flex-direction: column; }
-.section-title { font-size:13px; font-weight:600; color:#00ffcc; padding:8px 12px 2px; text-shadow:0 0 10px rgba(51,221,255,0.3); letter-spacing:2px; flex-shrink:0; &::before{content:'◆ ';color:#00d4ff} }
+.section-title { font-size:15px; font-weight:600; color:#00ffcc; padding:8px 12px 2px; text-shadow:0 0 10px rgba(51,221,255,0.3); letter-spacing:2px; flex-shrink:0; &::before{content:'◆ ';color:#00d4ff} }
 .ug-content { flex:1; display:flex; flex-direction:column; gap:4px; padding:0 8px 6px; min-height:0; }
 .ug-chart { flex:0 0 42%; position:relative; min-height:0; }
-.chart-label { position:absolute; top:2px; left:6px; font-size:10px; color:#4a5a6a; z-index:10; letter-spacing:1px; }
+.chart-label { position:absolute; top:2px; left:6px; font-size:12px; color:#4a5a6a; z-index:10; letter-spacing:1px; }
 
 .ug-energy { flex:0 0 50%; display:flex; align-items:center; gap:12px; padding:4px 8px; background:rgba(15,32,56,0.4); border-radius:8px; }
 .energy-ring { position:relative; width:80px; height:80px; flex-shrink:0; }
 .ring-svg { width:100%; height:100%; }
 .ring-fill { transition: stroke-dashoffset 1.5s ease; transform-origin:center; transform: rotate(-90deg); }
 .energy-text { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-.energy-num { font-size:18px; font-weight:700; color:#00ffcc; font-family:'Courier New',monospace; }
-.energy-label { font-size:9px; color:#4a5a6a; }
+.energy-num { font-size:20px; font-weight:700; color:#00ffcc; font-family:'Courier New',monospace; }
+.energy-label { font-size:11px; color:#4a5a6a; }
 .energy-stats { flex:1; display:flex; gap:8px; }
 .es-item { flex:1; text-align:center; padding:4px; background:rgba(0,153,255,0.05); border-radius:4px; }
-.es-lbl { display:block; font-size:9px; color:#4a5a6a; margin-bottom:2px; }
-.es-val { font-size:14px; font-weight:700; color:#00d4ff; font-family:'Courier New',monospace; }
+.es-lbl { display:block; font-size:11px; color:#4a5a6a; margin-bottom:2px; }
+.es-val { font-size:16px; font-weight:700; color:#00d4ff; font-family:'Courier New',monospace; }
 </style>

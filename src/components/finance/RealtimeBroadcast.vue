@@ -119,7 +119,7 @@ onUnmounted(() => {
 }
 
 .section-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: #33ddff;
   text-shadow: 0 0 10px rgba(51, 221, 255, 0.3);
@@ -137,7 +137,7 @@ onUnmounted(() => {
 }
 .hcol {
   flex: 1;
-  font-size: 10px;
+  font-size: 12px;
   color: #4a5a6a;
   text-align: center;
   letter-spacing: 1px;
@@ -147,7 +147,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 13px;
   color: #00ff95;
   flex-shrink: 0;
   .live-dot {
@@ -180,7 +180,7 @@ onUnmounted(() => {
   align-items: center;
   padding: 4px 8px;
   height: 30px;
-  font-size: 11px;
+  font-size: 13px;
   border-bottom: 1px solid rgba(0, 153, 255, 0.04);
   transition: background 0.3s;
 
@@ -201,7 +201,7 @@ onUnmounted(() => {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .col-branch {
@@ -218,7 +218,7 @@ onUnmounted(() => {
 }
 .col-unit {
   color: #4a5a6a;
-  font-size: 10px;
+  font-size: 12px;
 }
 .col-channel {
   color: #8899aa;
@@ -242,12 +242,12 @@ onUnmounted(() => {
   color: #8899aa;
 }
 .col-status {
-  font-size: 10px;
+  font-size: 12px;
   &.success { color: #00ff95; }
   &.processing { color: #ffb347; }
 }
 .col-time {
   color: #4a5a6a;
-  font-size: 10px;
+  font-size: 12px;
 }
 </style>
