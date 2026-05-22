@@ -23,6 +23,18 @@
           <div class="card-desc">AUM分析 · 财富客户 · 产品销售</div>
           <div class="card-status"><span class="dot"></span> 点击进入</div>
         </div>
+        <div class="screen-card" @click="goTo('/loan')">
+          <div class="card-icon">💰</div>
+          <div class="card-title" style="color: #FF8A34;">个贷与消费金融驾驶舱</div>
+          <div class="card-desc">贷款总览 · 放款经营 · 风险监控</div>
+          <div class="card-status" style="color: #FF8A34;"><span class="dot" style="background: #FF8A34; box-shadow: 0 0 8px rgba(255,138,52,0.7);"></span> 点击进入</div>
+        </div>
+        <div class="screen-card" @click="goTo('/digital')">
+          <div class="card-icon">📱</div>
+          <div class="card-title" style="color: #00E5FF;">手机银行与线上运营驾驶舱</div>
+          <div class="card-desc">数字用户 · 渠道活跃 · 交易运营</div>
+          <div class="card-status" style="color: #00E5FF;"><span class="dot" style="background: #00E5FF; box-shadow: 0 0 8px rgba(0,229,255,0.7);"></span> 点击进入</div>
+        </div>
       </div>
     </div>
   </div>

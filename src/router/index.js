@@ -21,6 +21,16 @@ const routes = [
     name: "Wealth",
     component: () => import("@/container/WealthContainer.vue"),
   },
+  {
+    path: "/loan",
+    name: "Loan",
+    component: () => import("@/container/LoanContainer.vue"),
+  },
+  {
+    path: "/digital",
+    name: "Digital",
+    component: () => import("@/container/DigitalContainer.vue"),
+  },
 ];
 
 const router = createRouter({
