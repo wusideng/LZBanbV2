@@ -41,4 +41,32 @@ src/
 
 ---
 
+# 代码说明
+  文件：vite.config.js
+  代码片段：
+    server: {
+        host: "0.0.0.0",
+        port: 3010,
+    }
+  文件夹：public/dataModal
+     记录各统计图实现统计图的提示词编写方案；
 
+# 工具安装
+1、nodejs v21.11.0
+   下载地址：https://nodejs.org/en/download
+   安装说明：https://blog.csdn.net/Natsuago/article/details/145567734
+2、npm v9.5.1
+    一般与nodejs一起安装，无需单独安装
+3、vscode 免费版本
+    下周地址：https://code.visualstudio.com/
+    安装说明：https://blog.csdn.net/leah126/article/details/131661331
+4、vuejs 及其他项目依赖安装
+    打开vscode 终端，进入项目根目录  
+    或者打开 命令行工具，进入项目根目录
+    执行： npm install     等待安装结束即可
+5、文心快码
+    安装方式: vscode Extension 市场搜索：文心快码
+    运行时的代码开发工具，本次统计图生成均依赖于此工具；
+6、项目运行
+    vscode 终端执行：npm run dev
+    根据提示，访问对应端口即可，浏览器访问：http://localhost:3010/

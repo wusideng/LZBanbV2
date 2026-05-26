@@ -4,7 +4,8 @@ const routes = [
   {
     path: "/",
     name: "Index",
-    component: () => import("@/pages/IndexPage.vue"),
+    // component: () => import("@/pages/IndexPage.vue"),
+    component: () => import("@/pages/PCIndexPage.vue"),
   },
   {
     path: "/finance",
@@ -35,6 +36,11 @@ const routes = [
     path: "/risk",
     name: "Risk",
     component: () => import("@/container/RiskContainer.vue"),
+  },
+  {
+    path: "/pctotal",
+    name: "PcTotal",
+    component: () => import("@/container/PcTotalContainer.vue"),
   },
 ];
 
