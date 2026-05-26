@@ -1,38 +1,50 @@
 <template>
-  <div class="pc-branch">
-    <div class="section-title">机构经营分析</div>
-    <div class="metrics-row">
-      <div class="metric"><span class="m-label">TOP1</span><span class="m-value gold">{{ bd.profitRanking[0].name }}</span><span class="m-sub">{{ bd.profitRanking[0].profit }}亿</span></div>
-      <div class="metric"><span class="m-label">TOP2</span><span class="m-value">{{ bd.profitRanking[1].name }}</span><span class="m-sub">{{ bd.profitRanking[1].profit }}亿</span></div>
-      <div class="metric"><span class="m-label">TOP3</span><span class="m-value">{{ bd.profitRanking[2].name }}</span><span class="m-sub">{{ bd.profitRanking[2].profit }}亿</span></div>
-      <div class="metric"><span class="m-label">平均增长</span><span class="m-value up">7.8%</span></div>
-    </div>
-    <div class="chart-main">
-      <BaseChart :option="chartOpt" height="100%" width="100%" />
+  <div class="pc-branch-ranking">
+    <div class="section-title">区域经营排行</div>
+    <div class="table-wrap">
+      <div class="t-header">
+        <span class="t-col col-rank">#</span>
+        <span class="t-col col-name">机构</span>
+        <span class="t-col col-num">利润(亿)</span>
+        <span class="t-col col-num">增长率</span>
+        <span class="t-col">经营评分</span>
+        <span class="t-col">趋势</span>
+      </div>
+      <div class="t-body">
+        <div v-for="b in branches" :key="b.rank" class="t-row" :class="{ top3: b.rank <= 3 }">
+          <span class="t-col col-rank">{{ ['🥇','🥈','🥉'][b.rank - 1] || b.rank }}</span>
+          <span class="t-col col-name">{{ b.name }}</span>
+          <span class="t-col col-num">{{ b.profit }}</span>
+          <span class="t-col col-num growth">{{ b.growth }}%</span>
+          <span class="t-col"><div class="score-bar"><div class="score-fill" :style="{ width: b.score + '%', background: b.score >= 80 ? '#4FD8FF' : b.score >= 60 ? '#6C7BFF' : '#FF9F43' }"></div></div></span>
+          <span class="t-col col-num score">{{ b.score }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
-import BaseChart from '@/components/common/BaseChart.vue'
-import { totalBranchData } from '@/mockData/totalData.js'
-const bd = totalBranchData
-
-const chartOpt = computed(() => ({
-  tooltip: { trigger: 'axis', backgroundColor: '#0a1628', borderColor: '#1a2a4a', textStyle: { color: '#e0e8f0', fontSize: 12 } },
-  title: { text: '利润贡献TOP10', textStyle: { color: '#8899aa', fontSize: 13, fontWeight: 'normal' }, left: 4, top: 2 },
-  grid: { top: 26, left: 60, right: 10, bottom: 8 },
-  xAxis: { type: 'value', splitLine: { lineStyle: { color: '#1a2a4a', type: 'dashed' } }, axisLabel: { color: '#4a5a6a', fontSize: 11 } },
-  yAxis: { type: 'category', data: bd.profitRanking.map(d => d.name).reverse(), axisLabel: { color: '#8899aa', fontSize: 12 }, axisLine: { lineStyle: { color: '#1a2a4a' } }, axisTick: { show: false } },
-  series: [{ type: 'bar', data: bd.profitRanking.map(d => ({ value: d.profit, itemStyle: { color: d.rank <= 3 ? '#FFD700' : (d.rank <= 5 ? '#4FD8FF' : '#1a3a5a') } })).reverse(), barWidth: 14, label: { show: true, position: 'right', color: '#e0e8f0', fontSize: 12, fontFamily: 'Courier New, monospace', formatter: p => p.value.toFixed(1) + '亿' }, itemStyle: { borderRadius: 0 } }]
-}))
+const branches = [
+  { rank: 1, name: '兰州分行', profit: '8.2', growth: 12.5, score: 92 },
+  { rank: 2, name: '天水分行', profit: '6.5', growth: 10.8, score: 85 },
+  { rank: 3, name: '酒泉分行', profit: '4.8', growth: 9.2, score: 78 },
+  { rank: 4, name: '张掖分行', profit: '3.8', growth: 8.6, score: 72 },
+  { rank: 5, name: '庆阳分行', profit: '3.2', growth: 7.8, score: 68 },
+  { rank: 6, name: '武威分行', profit: '2.6', growth: 7.2, score: 62 },
+  { rank: 7, name: '白银分行', profit: '2.2', growth: 6.5, score: 55 },
+  { rank: 8, name: '临夏分行', profit: '1.8', growth: 5.8, score: 50 }
+]
 </script>
 
 <style lang="scss" scoped>
-.pc-branch { height: 100%; display: flex; flex-direction: column; }
-.section-title { font-size: 15px; font-weight: 600; color: #e0e8f0; padding: 8px 12px 4px; letter-spacing: 1px; flex-shrink: 0; }
-.metrics-row { display: flex; gap: 4px; padding: 0 8px 4px; flex-shrink: 0; }
-.metric { flex: 1; text-align: center; padding: 4px 2px; background: #0a1628; border: 1px solid #1a2a4a; border-radius: 4px; .m-label { display: block; font-size: 12px; color: #4a5a6a; } .m-value { font-size: 15px; font-weight: 700; font-family: 'Courier New',monospace; color: #4FD8FF; &.gold { color: #FFD700; } &.up { color: #4FD8FF; } } .m-sub { display: block; font-size: 12px; color: #4a5a6a; } }
-.chart-main { flex: 1; min-height: 0; padding: 0 8px 6px; }
+.pc-branch-ranking { height: 100%; display: flex; flex-direction: column; }
+.section-title { font-size: 15px; font-weight: 600; color: #e0e8f0; padding: 6px 12px 4px; letter-spacing: 1px; flex-shrink: 0; }
+.table-wrap { flex: 1; display: flex; flex-direction: column; padding: 0 8px 6px; min-height: 0; }
+.t-header { display: flex; padding: 4px 6px; font-size: 12px; color: #4a5a6a; border-bottom: 1px solid #1a2a4a; flex-shrink: 0; }
+.t-body { flex: 1; min-height: 0; overflow-y: auto; &::-webkit-scrollbar { width: 2px; } &::-webkit-scrollbar-thumb { background: #1a2a4a; border-radius: 1px; } }
+.t-row { display: flex; padding: 5px 6px; font-size: 13px; color: #8899aa; border-bottom: 1px solid rgba(26,42,74,0.4); align-items: center; &.top3 { color: #e0e8f0; background: rgba(26,42,74,0.15); } }
+.t-col { flex: 1; text-align: center; &.col-rank { flex: 0 0 32px; } &.col-name { flex: 1.5; text-align: left; } &.col-num { flex: 0 0 64px; text-align: right; font-family: 'Courier New',monospace; font-size: 12px; &.growth { color: #4FD8FF; } &.score { color: #FFD700; } } }
+.score-bar { height: 6px; background: #0a1a2a; border-radius: 3px; overflow: hidden; max-width: 80px; margin: 0 auto; }
+.score-fill { height: 100%; border-radius: 3px; }
 </style>

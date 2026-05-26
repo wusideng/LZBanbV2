@@ -18,22 +18,21 @@
     <!-- KPI -->
     <div class="layer-kpi"><PcKpiBand /></div>
 
-    <!-- 第一行：客户经营 + 经营总览 -->
+    <!-- 第一行：核心指标 + 数据总览 -->
     <div class="layer-row1">
-      <div class="cell-left"><PcCustomerAnalysis /></div>
-      <div class="cell-main"><PcBusinessOverview /></div>
+      <div class="cell-left"><PcCoreIndicators /></div>
+      <div class="cell-main"><PcDataOverview /></div>
     </div>
 
-    <!-- 第二行：风险监控 + 机构排行 -->
+    <!-- 第二行：趋势图 + 排行 -->
     <div class="layer-row2">
-      <div class="cell-left"><PcRiskMonitor /></div>
-      <div class="cell-main"><PcBranchRanking /></div>
+      <div class="cell-trend"><PcTrendChart /></div>
+      <div class="cell-rank"><PcBranchRanking /></div>
     </div>
 
-    <!-- 底部趋势 -->
-    <div class="layer-bottom"><PcTrendAnalysis /></div>
+    <!-- 底部监控 -->
+    <div class="layer-bottom"><PcDataMonitor /></div>
 
-    <!-- 底部信息 -->
     <div class="footer-bar">兰州银行 · 全行经营总览驾驶舱 · 数据仅供展示参考</div>
   </div>
 </template>
@@ -41,14 +40,13 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import PcKpiBand from '@/components/pctotal/PcKpiBand.vue'
-import PcCustomerAnalysis from '@/components/pctotal/PcCustomerAnalysis.vue'
-import PcBusinessOverview from '@/components/pctotal/PcBusinessOverview.vue'
-import PcRiskMonitor from '@/components/pctotal/PcRiskMonitor.vue'
+import PcCoreIndicators from '@/components/pctotal/PcCoreIndicators.vue'
+import PcDataOverview from '@/components/pctotal/PcDataOverview.vue'
+import PcTrendChart from '@/components/pctotal/PcTrendChart.vue'
 import PcBranchRanking from '@/components/pctotal/PcBranchRanking.vue'
-import PcTrendAnalysis from '@/components/pctotal/PcTrendAnalysis.vue'
+import PcDataMonitor from '@/components/pctotal/PcDataMonitor.vue'
 
 const currentTime = ref(''), currentDate = ref(''), updateTime = ref('')
-
 function pad(n) { return String(n).padStart(2, '0') }
 function refreshClock() {
   const n = new Date()
@@ -56,7 +54,6 @@ function refreshClock() {
   currentDate.value = `${n.getFullYear()}年${pad(n.getMonth()+1)}月${pad(n.getDate())}日`
   updateTime.value = `${pad(n.getHours())}:${pad(n.getMinutes())}`
 }
-
 onMounted(() => { refreshClock(); setInterval(refreshClock, 1000) })
 onUnmounted(() => {})
 </script>
@@ -75,26 +72,28 @@ onUnmounted(() => {})
   &::-webkit-scrollbar-thumb { background: #1a2a4a; border-radius: 3px; }
 }
 
-.header-bar { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px 8px; flex-shrink: 0; }
-.header-left { .logo-area { width: 120px; height: 36px; background: #0a1628; border: 1px solid #1a2a4a; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5a6a; font-size: 13px; } }
+.header-bar { display: flex; align-items: center; justify-content: space-between; padding: 12px 28px 6px; flex-shrink: 0; }
+.header-left { .logo-area { width: 120px; height: 34px; background: #0a1628; border: 1px solid #1a2a4a; border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #4a5a6a; font-size: 13px; } }
 .header-center { text-align: center; }
-.page-title { font-size: 26px; font-weight: 700; color: #FFD700; letter-spacing: 8px; margin-bottom: 2px; }
-.page-subtitle { font-size: 12px; color: #4a5a6a; letter-spacing: 6px; }
+.page-title { font-size: 24px; font-weight: 700; color: #e0e8f0; letter-spacing: 6px; margin-bottom: 1px; }
+.page-subtitle { font-size: 12px; color: #4a5a6a; letter-spacing: 5px; }
 .header-right { text-align: right; }
-.header-time { font-size: 22px; font-weight: 700; color: #e0e8f0; font-family: 'Courier New',monospace; }
+.header-time { font-size: 20px; font-weight: 700; color: #e0e8f0; font-family: 'Courier New',monospace; }
 .header-date { font-size: 14px; color: #4a5a6a; margin-top: 1px; }
 .header-update { font-size: 12px; color: #4a5a6a; margin-top: 1px; }
-.header-line { height: 1px; background: linear-gradient(90deg,transparent,#1a2a4a,transparent); margin: 0 28px; flex-shrink: 0; }
+.header-line { height: 1px; background: #1a2a4a; margin: 0 28px; flex-shrink: 0; }
 
-.layer-kpi { flex-shrink: 0; padding: 10px 20px 6px; }
+.layer-kpi { flex-shrink: 0; padding: 8px 18px 4px; }
 
-.layer-row1 { height: 360px; display: flex; gap: 12px; padding: 6px 20px; flex-shrink: 0; }
-.layer-row2 { height: 320px; display: flex; gap: 12px; padding: 6px 20px; flex-shrink: 0; }
-
-.cell-left { flex: 0 0 28%; min-width: 0; }
+.layer-row1 { height: 350px; display: flex; gap: 10px; padding: 4px 18px; flex-shrink: 0; }
+.cell-left { flex: 0 0 26%; min-width: 0; }
 .cell-main { flex: 1; min-width: 0; }
 
-.layer-bottom { height: 200px; flex-shrink: 0; padding: 6px 20px 10px; }
+.layer-row2 { height: 240px; display: flex; gap: 10px; padding: 4px 18px; flex-shrink: 0; }
+.cell-trend { flex: 1; min-width: 0; }
+.cell-rank { flex: 0 0 28%; min-width: 0; }
 
-.footer-bar { text-align: center; padding: 10px 0 14px; color: #2a3a4a; font-size: 12px; letter-spacing: 2px; flex-shrink: 0; border-top: 1px solid #0a1a2a; margin-top: 4px; }
+.layer-bottom { height: 170px; flex-shrink: 0; padding: 4px 18px 6px; }
+
+.footer-bar { text-align: center; padding: 8px 0; color: #2a3a4a; font-size: 12px; letter-spacing: 2px; flex-shrink: 0; border-top: 1px solid #0a1a2a; }
 </style>
