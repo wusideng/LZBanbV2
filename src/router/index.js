@@ -4,8 +4,8 @@ const routes = [
   {
     path: "/",
     name: "Index",
-    // component: () => import("@/pages/IndexPage.vue"),
-    component: () => import("@/pages/PCIndexPage.vue"),
+    component: () => import("@/pages/IndexPage.vue"),
+    // component: () => import("@/pages/PCIndexPage.vue"),
   },
   {
     path: "/finance",
@@ -41,6 +41,16 @@ const routes = [
     path: "/pctotal",
     name: "PcTotal",
     component: () => import("@/container/PcTotalContainer.vue"),
+  },
+  {
+    path: "/pcpersonal",
+    name: "PcPersonal",
+    component: () => import("@/container/PcpPersonalContainer.vue"),
+  },
+  {
+    path: "/merchant",
+    name: "Merchant",
+    component: () => import("@/container/MerchantContainer.vue"),
   },
 ];
 

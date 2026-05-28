@@ -70,3 +70,8 @@ src/
 6、项目运行
     vscode 终端执行：npm run dev
     根据提示，访问对应端口即可，浏览器访问：http://localhost:3010/
+
+
+# 代码指引
+
+

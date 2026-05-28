@@ -11,6 +11,12 @@
             <div class="card-desc">SmartBI风格 · 简洁商务 · 经营分析</div>
             <div class="card-status" style="color: #FFD700;"><span class="dot" style="background: #FFD700; box-shadow: 0 0 8px rgba(255,215,0,0.7);"></span> 点击进入</div>
           </div>
+          <div class="screen-card" @click="goTo('/pcpersonal')">
+            <div class="card-icon">🏦</div>
+            <div class="card-title" style="color: #4FD8FF;">个人金融经营驾驶舱</div>
+            <div class="card-desc">零售分析 · 渠道运营 · 财富业务</div>
+            <div class="card-status" style="color: #4FD8FF;"><span class="dot" style="background: #4FD8FF; box-shadow: 0 0 8px rgba(79,216,255,0.7);"></span> 点击进入</div>
+          </div>
         </div>
       </div>
     </div>
